@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let totalPayment = sum + overPayment;
 
     // Calculate monthly payment considering varying month lengths
-    let months = days / 30.4375; // average days in a month
+    let months = days / 30.42; // average days in a month
     let perMonth = totalPayment / months;
 
     // Update the document with calculated values
