@@ -27,6 +27,8 @@ const callmen = document.getElementById("callmen");
 const callmenClose = document.getElementById("callmen__close");
 const callmenThanks = document.getElementById("callmen__thanks");
 const callmenThanksClose = document.getElementById("callmen__thanks--close");
+const personalDatas = document.querySelectorAll("#personal_data");
+const agreement = document.getElementById("agreement");
 
 // Menu click
 menuItems.forEach((menu, i) => {
@@ -157,6 +159,16 @@ calculatorNext.addEventListener("click", () => {
 function formatValue(value) {
   return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
+
+personalDatas.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    agreement.classList.add("show");
+  });
+});
+
+agreement.querySelector("#agreement__close").addEventListener("click", () => {
+  agreement.classList.remove("show");
+});
 
 const openAccordion = (index) => {
   const accordion = document.getElementsByClassName("accordion-item");
