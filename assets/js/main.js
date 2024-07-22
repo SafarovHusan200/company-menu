@@ -56,6 +56,9 @@ menuItems.forEach((menu, i) => {
   });
 });
 
+document.querySelector(".menu__map").addEventListener("click", () => {
+  office.classList.add("show");
+});
 // Ariza close
 arizaClose.addEventListener("click", () => {
   ariza.classList.remove("show");

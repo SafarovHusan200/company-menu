@@ -296,8 +296,38 @@ button:disabled {
 }
 .menu__map {
   width: 100%;
+  height: 269px;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
+}
+.menu__map .map {
+  position: absolute;
+}
+.menu__map .location {
+  position: absolute;
+  top: 81px;
+  left: 121px;
+}
+.menu__map .location2 {
+  position: absolute;
+  top: 4px;
+  left: 37px;
+}
+.menu__map .location3 {
+  position: absolute;
+  top: 80px;
+  left: 204px;
+}
+.menu__map .location4 {
+  position: absolute;
+  top: 168px;
+  left: 145px;
+}
+.menu__map .location5 {
+  position: absolute;
+  top: 170px;
+  left: 228px;
 }
 
 .ariza {

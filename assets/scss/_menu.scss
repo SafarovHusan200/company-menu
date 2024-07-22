@@ -68,8 +68,41 @@
 
   &__map {
     width: 100%;
+    height: 269px;
     border-radius: 10px;
 
     overflow: hidden;
+
+    position: relative;
+
+    .map {
+      position: absolute;
+    }
+
+    .location {
+      position: absolute;
+      top: 81px;
+      left: 121px;
+    }
+    .location2 {
+      position: absolute;
+      top: 4px;
+      left: 37px;
+    }
+    .location3 {
+      position: absolute;
+      top: 80px;
+      left: 204px;
+    }
+    .location4 {
+      position: absolute;
+      top: 168px;
+      left: 145px;
+    }
+    .location5 {
+      position: absolute;
+      top: 170px;
+      left: 228px;
+    }
   }
 }
