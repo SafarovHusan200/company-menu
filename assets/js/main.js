@@ -61,6 +61,45 @@ arizaClose.addEventListener("click", () => {
   ariza.classList.remove("show");
 });
 
+// Arice checked true => next btn
+document
+  .getElementById("ariza-checkbox")
+  .addEventListener("click", function () {
+    if (this.checked) {
+      arizaNext.disabled = false;
+    } else {
+      arizaNext.disabled = true;
+    }
+  });
+document
+  .getElementById("ariza-checkbox_day")
+  .addEventListener("click", function () {
+    if (this.checked) {
+      arizaNextInDay.disabled = false;
+    } else {
+      arizaNextInDay.disabled = true;
+    }
+  });
+
+document
+  .getElementById("contact-checkbox")
+  .addEventListener("click", function () {
+    if (this.checked) {
+      document.getElementById("apply-now").disabled = false;
+    } else {
+      document.getElementById("apply-now").disabled = true;
+    }
+  });
+document
+  .getElementById("callmen-checkbox_day")
+  .addEventListener("click", function () {
+    if (this.checked) {
+      document.getElementById("send-message").disabled = false;
+    } else {
+      document.getElementById("send-message").disabled = true;
+    }
+  });
+
 // Ariza next btn
 arizaNext.addEventListener("click", () => {
   arizaResult.classList.add("show");
@@ -85,7 +124,7 @@ contactClose.addEventListener("click", () => {
 // form Submit
 formContact.addEventListener("submit", (e) => {
   e.preventDefault();
-
+  e.target.reset();
   thanks.classList.add("show");
 });
 
@@ -266,3 +305,8 @@ function calculateLoan() {
       maximumFractionDigits: 0,
     });
 }
+
+$(document).ready(function () {
+  $("#phone").inputmask("+7(999)-999-9999");
+  $("#phone-number").inputmask("+7(999)-999-9999");
+});

@@ -63,6 +63,9 @@ html {
   text-decoration-line: underline;
 }
 
+input {
+  font-size: 16px;
+}
 .btns {
   display: flex;
   justify-content: center;
@@ -102,6 +105,12 @@ a {
 button {
   border: none;
   cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    background-color: #7b7b7b;
+    cursor: no-drop;
+  }
 }
 
 .section__bottom {

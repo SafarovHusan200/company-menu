@@ -6,6 +6,11 @@
     <link rel="icon" href="./assets/images/title-icon.jpg" />
     <title>Menu</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Required for using jQuery input mask plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
+
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
@@ -66,7 +71,18 @@
           </ul>
 
           <div class="menu__map">
-            <img src="./assets/images/map.svg" alt="map" />
+            <a href="https://maps.app.goo.gl/6MHy1Sc7F5ooitVX6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577343.9849883706!2d36.72619663025083!3d55.58025703866835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2sMoskva%2C%20Rossiya!5e0!3m2!1suz!2sus!4v1721653773193!5m2!1suz!2sus"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              ></a
+            >
           </div>
         </div>
       </section>
@@ -157,7 +173,9 @@
               </div>
 
               <div class="btn_and_link">
-                <button class="btn-success" id="ariza-next">Далее</button>
+                <button class="btn-success" id="ariza-next" disabled>
+                  Далее
+                </button>
                 <a href="#" class="link">Условия выдачи займов</a>
               </div>
 
@@ -218,7 +236,7 @@
               </div>
 
               <div class="btn_and_link">
-                <button class="btn-success" id="ariza-next_in-day">
+                <button class="btn-success" id="ariza-next_in-day" disabled>
                   Далее
                 </button>
                 <a href="#" class="link">Условия выдачи займов</a>
@@ -298,7 +316,14 @@
               </div>
 
               <div class="btns">
-                <button type="submit" class="btn-success">Подать заявку</button>
+                <button
+                  type="submit"
+                  id="apply-now"
+                  class="btn-success"
+                  disabled
+                >
+                  Подать заявку
+                </button>
               </div>
             </form>
 
@@ -774,7 +799,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="accordion-item" onclick="openAccordion(8)">
+                <li class="accordion-item" onclick="openAccordion(9)">
                   <div
                     class="accordion-title"
                     id="heading3"
@@ -808,7 +833,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="accordion-item" onclick="openAccordion(9)">
+                <li class="accordion-item" onclick="openAccordion(10)">
                   <div
                     class="accordion-title"
                     id="heading3"
@@ -842,7 +867,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="accordion-item" onclick="openAccordion(10)">
+                <li class="accordion-item" onclick="openAccordion(11)">
                   <div
                     class="accordion-title"
                     id="heading3"
@@ -1187,6 +1212,7 @@
                 <input
                   type="text"
                   name="phone"
+                  id="phone-number"
                   placeholder="Номер телефона"
                   required
                 />
@@ -1195,11 +1221,14 @@
                   id="message"
                   cols="30"
                   rows="10"
+                  required
                   placeholder="Введите сообщение"
                 ></textarea>
 
                 <div class="btns">
-                  <button class="btn-success">Отправить</button>
+                  <button class="btn-success" id="send-message" disabled>
+                    Отправить
+                  </button>
                 </div>
               </form>
 
