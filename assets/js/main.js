@@ -1,0 +1,248 @@
+const arizaRublBlock = document.getElementById("ariza-rubl");
+const arizaDayBlock = document.getElementById("ariza-day");
+const arizaRange = document.getElementById("ariza__range");
+const arizaRangeDay = document.getElementById("ariza__day");
+const ariza = document.getElementById("ariza");
+const arizaClose = document.getElementById("ariza__close");
+const arizaNext = document.getElementById("ariza-next");
+const arizaResult = document.getElementById("ariza__result");
+const menuItems = document.querySelectorAll(".menu__items .menu__item");
+const arizaAccept = document.getElementById("ariza-accept");
+const arizaNextInDay = document.getElementById("ariza-next_in-day");
+const contact = document.getElementById("contact");
+const contactClose = document.getElementById("contact__close");
+const formContact = document.getElementById("form__contact");
+const thanks = document.getElementById("thanks");
+const thanksClose = document.getElementById("thanks__close");
+const calculator = document.getElementById("calculator");
+const calculatorClose = calculator.querySelector("#calculator__close");
+const calculatorNext = calculator.querySelector("#calculator-next");
+const office = document.getElementById("office");
+const company = document.getElementById("company");
+const companyClose = document.getElementById("company__close");
+const faq = document.getElementById("faq");
+const faqClose = document.getElementById("faq__close");
+const faqAccordionItems = document.querySelectorAll("#faq__accordion-item");
+const callmen = document.getElementById("callmen");
+const callmenClose = document.getElementById("callmen__close");
+const callmenThanks = document.getElementById("callmen__thanks");
+const callmenThanksClose = document.getElementById("callmen__thanks--close");
+
+// Menu click
+menuItems.forEach((menu, i) => {
+  menu.addEventListener("click", () => {
+    switch (i) {
+      case 0:
+        ariza.classList.add("show");
+        break;
+      case 1:
+        calculator.classList.add("show");
+        break;
+      case 2:
+        office.classList.add("show");
+        break;
+      case 3:
+        company.classList.add("show");
+        break;
+      case 4:
+        faq.classList.add("show");
+        break;
+      case 5:
+        callmen.classList.add("show");
+        break;
+    }
+  });
+});
+
+// Ariza close
+arizaClose.addEventListener("click", () => {
+  ariza.classList.remove("show");
+});
+
+// Ariza next btn
+arizaNext.addEventListener("click", () => {
+  arizaResult.classList.add("show");
+});
+
+arizaAccept.addEventListener("click", () => {
+  arizaResult.classList.remove("show");
+
+  arizaRublBlock.classList.add("hidden");
+  arizaDayBlock.classList.remove("hidden");
+});
+
+// Open contact
+arizaNextInDay.addEventListener("click", () => {
+  contact.classList.add("show");
+});
+// Close contact
+contactClose.addEventListener("click", () => {
+  contact.classList.remove("show");
+});
+
+// form Submit
+formContact.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  thanks.classList.add("show");
+});
+
+// calculator close
+calculatorClose.addEventListener("click", () => {
+  calculator.classList.remove("show");
+});
+
+// company close
+companyClose.addEventListener("click", () => {
+  company.classList.remove("show");
+});
+
+// FAQ close
+faqClose.addEventListener("click", () => {
+  faq.classList.remove("show");
+});
+
+// FAQ accordion
+faqAccordionItems.forEach((item, i) => {
+  item.addEventListener("click", function () {
+    faqAccordionItems.forEach((acc, j) => {
+      if (i !== j) {
+        acc.querySelector("span").classList.remove("bold");
+        acc.querySelector("img").classList.remove("rotate");
+        acc
+          .querySelector(".faq__accordion--item_content")
+          .classList.remove("open");
+      } else {
+        item.querySelector("img").classList.toggle("rotate");
+        item.querySelector("span").classList.toggle("bold");
+        this.querySelector(".faq__accordion--item_content").classList.toggle(
+          "open"
+        );
+      }
+    });
+  });
+});
+
+// Call meneger => Связьс менеджером
+callmenClose.addEventListener("click", () => {
+  callmen.classList.remove("show");
+});
+
+callmen.querySelector("#callmen__form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  e.target.reset();
+
+  callmenThanks.classList.add("show");
+});
+
+callmenThanksClose.addEventListener("click", () => {
+  callmenThanks.classList.remove("show");
+  callmen.classList.remove("show");
+});
+
+// Thanks page close
+thanksClose.addEventListener("click", () => {
+  thanks.classList.remove("show");
+  contact.classList.remove("show");
+
+  ariza.classList.remove("show");
+});
+
+// Calculator next => form
+calculatorNext.addEventListener("click", () => {
+  calculator.classList.remove("show");
+  contact.classList.add("show");
+});
+
+function formatValue(value) {
+  return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
+const openAccordion = (index) => {
+  const accordion = document.getElementsByClassName("accordion-item");
+
+  for (let i = 0; i < accordion.length; i++) {
+    const content = accordion[i].querySelector(".accordion-content");
+    const heading = accordion[i].querySelector("div");
+
+    if (index === i) {
+      const isOpen = accordion[index].classList.toggle("open");
+      accordion[index].classList.toggle("rotate");
+      heading.setAttribute("aria-expanded", isOpen);
+      if (isOpen) {
+        content.style.height = content.scrollY + "px";
+      } else {
+        // content.style.height = "0px";
+      }
+    } else {
+      accordion[i].classList.remove("open");
+      accordion[i].classList.remove("rotate");
+      heading.setAttribute("aria-expanded", "false");
+      // content.style.height = "0px";
+    }
+  }
+};
+
+document
+  .querySelectorAll(".accordion-item .accordion-title")
+  .forEach((heading, index) => {
+    heading.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        openAccordion(index);
+      }
+    });
+  });
+
+office.querySelector("#office__close").addEventListener("click", () => {
+  office.classList.remove("show");
+});
+
+const progressElements = document.querySelectorAll('input[type="range"]');
+
+progressElements.forEach(function (element) {
+  element.addEventListener("input", function () {
+    let value = ((this.value - this.min) / (this.max - this.min)) * 100;
+    let value2 = this.value;
+
+    this.parentNode.querySelector(".count span").textContent =
+      formatValue(value2);
+    this.style.background =
+      "linear-gradient(to right, #fff 0%, #fff " +
+      value +
+      "%, #7B7B7B " +
+      value +
+      "%, #7B7B7B 100%)";
+
+    calculateLoan();
+  });
+});
+
+function calculateLoan() {
+  let sum = parseInt(document.querySelector("input[name=sum]").value);
+  let percent = parseInt(document.querySelector("input[name=bet]").value);
+  let days = parseInt(document.querySelector("input[name=limitation]").value);
+
+  percent = percent / 100;
+
+  let overPayment = (sum * percent * days) / 365;
+  let totalPayment = sum + overPayment;
+  let perDay = totalPayment / (days / 30);
+
+  document.querySelector(".everyMonthsPrice span").textContent =
+    perDay.toLocaleString("en-US", {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    });
+
+  document.querySelector(".overPayment span").textContent =
+    overPayment.toLocaleString("en-US", {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    });
+
+  document.querySelector(".totalPayments span").textContent =
+    totalPayment.toLocaleString("en-US", {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    });
+}

@@ -1,0 +1,132 @@
+.office {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: -100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s all ease;
+
+  &.show {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .section__body {
+    background: $section-bg;
+
+    padding-bottom: 18px;
+
+    .container {
+      flex-direction: column;
+
+      .accordion-items {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+
+        margin-top: 31px;
+
+        .accordion-item {
+          padding: 0;
+          margin: 0;
+          min-height: 57px;
+
+          &:nth-child(2) .accordion-title {
+            background: #a6c400;
+          }
+          &:nth-child(3) .accordion-title {
+            background: #d7db00;
+          }
+          &:nth-child(5) .accordion-title {
+            background-color: #a6c400;
+          }
+          &:nth-child(6) .accordion-title {
+            background-color: #d7db00;
+          }
+          &:nth-child(8) .accordion-title {
+            background-color: #a6c400;
+          }
+          &:nth-child(9) .accordion-title {
+            background-color: #d7db00;
+          }
+          &:nth-child(11) .accordion-title {
+            background-color: #a6c400;
+          }
+          &:nth-child(12) .accordion-title {
+            background-color: #d7db00;
+          }
+        }
+      }
+
+      .accordion-title {
+        width: 326px;
+        height: 57px;
+        border-radius: 10px;
+        background: #66a400;
+        padding: 0 27px 0 22px;
+
+        position: relative;
+        transition: 0.25s all ease;
+        z-index: 1;
+
+        color: #fff;
+
+        font-size: 16px;
+        font-weight: 500;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .acc_icon {
+        transition: 0.25s;
+      }
+      .rotate .acc_icon {
+        transform: rotateZ(-180deg);
+      }
+
+      .accordion-content {
+        height: 0px;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        gap: 27px;
+        flex-direction: column;
+        overflow: hidden;
+        transition: 0.25s all ease;
+
+        background-color: #fff;
+        transform: translateY(-10px);
+        padding: 1px 38px 0px 22px;
+      }
+
+      .accordion-content p {
+        color: #3c3c3c;
+
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .accordion-content .btn-success {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .open .accordion-content {
+        height: 100%;
+        opacity: 1;
+        transition: 0.25s all ease;
+
+        padding-top: 25px;
+        padding-bottom: 20px;
+
+        border-radius: 0 0 10px 10px;
+      }
+    }
+  }
+}

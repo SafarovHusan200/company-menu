@@ -1,0 +1,37 @@
+// Thanks section
+.thanks {
+  width: 393px;
+  height: 852px;
+  background: $section-bg;
+
+  position: absolute;
+  top: -50%;
+  opacity: 0;
+  visibility: 0;
+  transform: scale(0);
+  transition: 0.25s all ease;
+  z-index: 3;
+
+  &.show {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+  .container {
+    flex-direction: column;
+
+    h3 {
+      margin-top: 341px;
+
+      color: #fff;
+      text-align: center;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    button {
+      margin-top: 108px;
+    }
+  }
+}

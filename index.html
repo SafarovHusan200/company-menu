@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/title-icon.jpg" />
+    <title>Menu</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header class="header section__head" id="header">
+        <div class="container">
+          <h2 class="title">Меню</h2>
+          <img src="./assets/images/bag.svg" alt="image" />
+        </div>
+      </header>
+
+      <section class="menu">
+        <div class="container">
+          <ul class="menu__items">
+            <li class="menu__item">
+              <button>
+                <img src="./assets/images/icons/ariza.svg" alt="calculator" />
+                <span>Заявка</span>
+              </button>
+            </li>
+            <li class="menu__item">
+              <button>
+                <img
+                  src="./assets/images/icons/calculator.svg"
+                  alt="calculator"
+                />
+                <span>Калькулятор</span>
+              </button>
+            </li>
+            <li class="menu__item">
+              <button>
+                <img src="./assets/images/icons/location.svg" alt="location" />
+                <span>Выбрать офис</span>
+              </button>
+            </li>
+            <li class="menu__item">
+              <button>
+                <img src="./assets/images/icons/company.svg" alt="company" />
+                <span>О компании</span>
+              </button>
+            </li>
+            <li class="menu__item">
+              <button>
+                <img src="./assets/images/icons/faq.svg" alt="faq" />
+                <span>Частые вопросы</span>
+              </button>
+            </li>
+            <li class="menu__item">
+              <button>
+                <img
+                  src="./assets/images/icons/cal_meneger.svg"
+                  alt="cal_meneger"
+                />
+                <span>Связь с менеджером</span>
+              </button>
+            </li>
+          </ul>
+
+          <div class="menu__map">
+            <img src="./assets/images/map.svg" alt="map" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Ariza section -->
+      <section class="ariza" id="ariza">
+        <div class="ariza__block">
+          <div class="ariza__result" id="ariza__result">
+            <div class="ariza__result--content">
+              <div class="ariza__result--content_text">
+                <h4>Условия предоставления услуг:</h4>
+                <br />
+
+                <p>
+                  Минимальный срок погашения <br />
+                  кредита составляет <br />
+                  61 день;<br />
+                  - Максимальный срок погашения <br />
+                  кредита составляет <br />
+                  365 дней; <br />
+                  - Максимальная годовая<br />
+                  процентная ставка, включающая <br />
+                  ссудный процент, а также все <br />
+                  остальные комиссии и расходы за <br />
+                  год (Annual Percentage Rate APR)
+                  <br />
+                  составляет 33%,  минимальная<br />
+                  0,5%. Годовой процент за <br />
+                  пользование Кредитом - min 0,5%,<br />
+                  max 33,29%. <br />
+                  - Минимальная ставка за<br />
+                  пользование кредитом в день<br />
+                  составляет 0.5%; <br />
+                  - Максимальная ставка за <br />
+                  пользование кредитом в день<br />
+                  составляет 0,84%;<br />
+                  - Другие комиссии отсутствуют. <br />
+                  - Продление кредита возможно <br />
+                  при своевременном обращении в <br />
+                  офис компании персонально или<br />
+                  по телефону. <br />
+                  <br />
+                </p>
+              </div>
+              <div class="ariza__result--btn">
+                <button class="btn-success" id="ariza-accept">Понятно</button>
+              </div>
+            </div>
+          </div>
+          <div class="section__head">
+            <div class="container">
+              <h2 class="title">Заявка на заём</h2>
+              <button id="ariza__close">
+                <img src="./assets/images/icons/prev_icon.svg" alt="icon" />
+              </button>
+            </div>
+          </div>
+
+          <!-- Ariza rubl range -->
+          <div class="ariza__body ariza-rubl" id="ariza-rubl">
+            <div class="container">
+              <div class="ariza__body--summa text-light">
+                Выбор <a href="#">суммы</a> от 1 000 до 60 000 ₽
+              </div>
+
+              <div class="ariza__body--range_calc">
+                <div
+                  class="ariza__range-count count text-light"
+                  id="ariza__range-count"
+                >
+                  <span>0</span> ₽
+                </div>
+
+                <input
+                  type="range"
+                  class="ariza__range"
+                  id="ariza__range"
+                  min="1000"
+                  max="60000"
+                  value="0"
+                  step="1"
+                />
+
+                <div class="row">
+                  <span class="text-light">1 000 ₽</span>
+                  <span class="text-light">60 000 ₽</span>
+                </div>
+              </div>
+
+              <div class="btn_and_link">
+                <button class="btn-success" id="ariza-next">Далее</button>
+                <a href="#" class="link">Условия выдачи займов</a>
+              </div>
+
+              <div class="section__bottom">
+                <div class="section__bottom--item">
+                  <label for="ariza-checkbox" class="text-light"
+                    >Даю своё согласие <br />
+                    на обработку</label
+                  >
+                  <a href="#" class="link">персональных данных</a>
+                </div>
+
+                <div class="checkbox_block">
+                  <input
+                    type="checkbox"
+                    id="ariza-checkbox"
+                    class="ariza-checkbox"
+                  />
+                  <label for="ariza-checkbox" class="custom-checkbox">
+                    <span></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ariza day range -->
+          <div class="ariza__body ariza-day hidden" id="ariza-day">
+            <div class="container">
+              <div class="ariza__body--summa text-light">
+                Выбор <a href="#">срока</a> от 61 до 365 дней
+              </div>
+
+              <div class="ariza__body--range_calc">
+                <div
+                  class="ariza__range-count count text-light"
+                  id="ariza__range-count_day"
+                >
+                  <span>61</span> дней
+                </div>
+
+                <input
+                  type="range"
+                  class="ariza__range"
+                  id="ariza__day"
+                  min="61"
+                  max="365"
+                  value="0"
+                  step="1"
+                />
+
+                <div class="row">
+                  <span class="text-light">61 день</span>
+                  <span class="text-light">365 дней</span>
+                </div>
+              </div>
+
+              <div class="btn_and_link">
+                <button class="btn-success" id="ariza-next_in-day">
+                  Далее
+                </button>
+                <a href="#" class="link">Условия выдачи займов</a>
+              </div>
+
+              <div class="section__bottom">
+                <div class="section__bottom--item">
+                  <label for="ariza-checkbox" class="text-light"
+                    >Даю своё согласие <br />
+                    на обработку</label
+                  >
+                  <a href="#" class="link">персональных данных</a>
+                </div>
+
+                <div class="checkbox_block">
+                  <input
+                    type="checkbox"
+                    id="ariza-checkbox_day"
+                    class="ariza-checkbox"
+                  />
+                  <label for="ariza-checkbox_day" class="custom-checkbox">
+                    <span></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact section -->
+      <section class="contact" id="contact">
+        <div class="section__head">
+          <div class="container">
+            <h2 class="title">
+              Контактные<br />
+              данные
+            </h2>
+            <button id="contact__close">
+              <img src="./assets/images/icons/prev_icon.svg" alt="icon" />
+            </button>
+          </div>
+        </div>
+        <div class="section__body">
+          <div class="container">
+            <div class="section__body--title">Введите ваши данные</div>
+
+            <form class="form__contact" id="form__contact">
+              <div class="form__contact--item">
+                <input
+                  type="text"
+                  placeholder="ФИО"
+                  name="name"
+                  id="name"
+                  required
+                />
+              </div>
+              <div class="form__contact--item">
+                <input
+                  type="email"
+                  placeholder="e-mail"
+                  name="email"
+                  id="email"
+                  required
+                />
+              </div>
+              <div class="form__contact--item">
+                <input
+                  type="number"
+                  placeholder="Номер телефона"
+                  name="phone"
+                  id="phone"
+                  required
+                />
+              </div>
+
+              <div class="btns">
+                <button type="submit" class="btn-success">Подать заявку</button>
+              </div>
+            </form>
+
+            <div class="section__bottom">
+              <div class="section__bottom--item">
+                <label for="ariza-checkbox" class="text-light"
+                  >Даю своё согласие <br />
+                  на обработку</label
+                >
+                <a href="#" class="link">персональных данных</a>
+              </div>
+
+              <div class="checkbox_block">
+                <input
+                  type="checkbox"
+                  id="contact-checkbox"
+                  class="ariza-checkbox"
+                />
+                <label for="contact-checkbox" class="custom-checkbox">
+                  <span></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Calculator section -->
+      <section class="calculator" id="calculator">
+        <div class="section__head">
+          <div class="container">
+            <h2 class="title">Калькулятор</h2>
+            <button id="calculator__close">
+              <img src="./assets/images/icons/prev_icon.svg" alt="icon" />
+            </button>
+          </div>
+        </div>
+
+        <div class="section__body">
+          <div class="container">
+            <div class="calculator__block">
+              <!-- Calc summa -->
+              <div class="calculator__block--summa">
+                <div class="row">
+                  <label for="calc__range-summa " class="text-light"
+                    >Сумма</label
+                  >
+                  <div class="count"><span>45 000</span> ₽</div>
+                </div>
+
+                <input
+                  type="range"
+                  class="ariza__range"
+                  id="calc__range-summa"
+                  name="sum"
+                  min="1000"
+                  max="60000"
+                  value="1000"
+                  step="1"
+                />
+
+                <div class="row">
+                  <span class="text-light">1 000 ₽</span>
+                  <span class="text-light">60 000 ₽</span>
+                </div>
+              </div>
+
+              <!-- Calc stavka -->
+              <div class="calculator__block--stavka">
+                <div class="row">
+                  <label for="calc__range-stavka " class="text-light"
+                    >Ставка</label
+                  >
+                  <div class="count"><span>10</span> %</div>
+                </div>
+
+                <input
+                  type="range"
+                  class="ariza__range"
+                  id="calc__range-stavka"
+                  name="bet"
+                  min="0.5"
+                  max="33"
+                  value="1"
+                  step="0.5"
+                />
+
+                <div class="row">
+                  <span class="text-light">0,5%</span>
+                  <span class="text-light">33%</span>
+                </div>
+              </div>
+
+              <!-- Calc srok(term) -->
+              <div class="calculator__block--term">
+                <div class="row">
+                  <label for="calc__range-term " class="text-light">Срок</label>
+                  <div class="count"><span>120</span> дней</div>
+                </div>
+
+                <input
+                  type="range"
+                  class="ariza__range"
+                  id="calc__range-term"
+                  name="limitation"
+                  min="61"
+                  max="365"
+                  value="61"
+                  step="1"
+                />
+
+                <div class="row">
+                  <span class="text-light">61 день</span>
+                  <span class="text-light">365 дней</span>
+                </div>
+              </div>
+
+              <!-- Calculator result -->
+              <div class="calculator__block--result">
+                <div class="row">
+                  <div class="calc-res-text w-50">Ежемесячный платёж</div>
+                  <div class="calc-res-number everyMonthsPrice">
+                    <span>12 500</span> ₽
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="calc-res-text">Переплата</div>
+                  <div class="calc-res-number overPayment">
+                    <span>4 500</span> ₽
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="calc-res-text">Общая выплата</div>
+                  <div class="calc-res-number totalPayments">
+                    <span>49 500</span> ₽
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn_and_link">
+              <button class="btn-success" id="calculator-next">Далее</button>
+              <a href="#" class="link">Условия выдачи займов</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Office section -->
+      <section class="office" id="office">
+        <div class="section__head">
+          <div class="container">
+            <h2 class="title">Выбрать офис</h2>
+            <button id="office__close">
+              <img src="./assets/images/icons/prev_icon.svg" alt="icon" />
+            </button>
+          </div>
+        </div>
+
+        <div class="section__body">
+          <div class="container">
+            <div class="section__body--title">
+              Расположение и расписание офисов
+            </div>
+
+            <div class="office__accordion">
+              <ul class="accordion-items">
+                <li class="accordion-item" onclick="openAccordion(0)">
+                  <div
+                    class="accordion-title"
+                    id="heading1"
+                    tabindex="0"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="content1"
+                  >
+                    <span>Москва</span>
+                    <img
+                      class="acc_icon"
+                      src="./assets/images/icons/acc_icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div
+                    class="accordion-content"
+                    id="content1"
+                    role="region"
+                    aria-labelledby="heading1"
+                  >
+                    <p>
+                      Адрес: ул. Красная, 1 Тел.: +7 (495) 123-45-67 <br />
+                      <br />
+                      Режим работы: Пн-Пт 9:00-18:00 Перерыв на обед:
+                      13:00-14:00
+                    </p>
+
+                    <div class="btns">
+                      <a href="tel:" class="btn-success">Заказать звонок</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item" onclick="openAccordion(1)">
+                  <div
+                    class="accordion-title"
+                    id="heading2"
+                    tabindex="0"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="content2"
+                  >
+                    <span>Санкт-Петербург</span>
+                    <img
+                      class="acc_icon"
+                      src="./assets/images/icons/acc_icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div
+                    class="accordion-content"
+                    id="content2"
+                    role="region"
+                    aria-labelledby="heading2"
+                  >
+                    <p>
+                      Адрес: ул. Красная, 1 Тел.: +7 (495) 123-45-67 <br />
+                      <br />
+                      Режим работы: Пн-Пт 9:00-18:00 Перерыв на обед:
+                      13:00-14:00
+                    </p>
+
+                    <div class="btns">
+                      <a href="tel:" class="btn-success">Заказать звонок</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item" onclick="openAccordion(2)">
+                  <div
+                    class="accordion-title"
+                    id="heading3"
+                    tabindex="0"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="content3"
+                  >
+                    <span>Екатеринбург</span>
+                    <img
+                      class="acc_icon"
+                      src="./assets/images/icons/acc_icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div
+                    class="accordion-content"
+                    id="content3"
+                    role="region"
+                    aria-labelledby="heading3"
+                  >
+                    <p>
+                      Адрес: ул. Красная, 1 Тел.: +7 (495) 123-45-67 <br />
+                      <br />
+                      Режим работы: Пн-Пт 9:00-18:00 Перерыв на обед:
+                      13:00-14:00
+                    </p>
+
+                    <div class="btns">
+                      <a href="tel:" class="btn-success">Заказать звонок</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item" onclick="openAccordion(3)">
+                  <div
+                    class="accordion-title"
+                    id="heading3"
+                    tabindex="0"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="content3"
+                  >
+                    <span>Новосибирск</span>
+                    <img
+                      class="acc_icon"
+                      src="./assets/images/icons/acc_icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div
+                    class="accordion-content"
+                    id="content3"
+                    role="region"
+                    aria-labelledby="heading3"
+                  >
+                    <p>
+                      Адрес: ул. Красная, 1 Тел.: +7 (495) 123-45-67 <br />
+                      <br />
+                      Режим работы: Пн-Пт 9:00-18:00 Перерыв на обед:
+                      13:00-14:00
+                    </p>
+
+                    <div class="btns">
+                      <a href="tel:" class="btn-success">Заказать звонок</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item" onclick="openAccordion(4)">
+                  <div
+                    class="accordion-title"
+                    id="heading3"
+                    tabindex="0"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="content3"
+                  >
+                    <span>Красноярск</span>
+                    <img
+                      class="acc_icon"
+                      src="./assets/images/icons/acc_icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div
+                    class="accordion-content"
+                    id="content3"
+                    role="region"
+                    aria-labelledby="heading3"
+                  >
+                    <p>
+                      Адрес: ул. Красная, 1 Тел.: +7 (495) 123-45-67 <br />
+                      <br />
+                      Режим работы: Пн-Пт 9:00-18:00 Перерыв на обед:
+                      13:00-14:00
+                    </p>
+
+                    <div class="btns">
+                      <a href="tel:" class="btn-success">Заказать звонок</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item" onclick="openAccordion(5)">
+                  <div
+                    class="accordion-title"
+                    id="heading3"
+                    tabindex="0"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="content3"
+                  >
+                    <span>Казань</span>
+                    <img
+                      class="acc_icon"
+                      src="./assets/images/icons/acc_icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div
+                    class="accordion-content"
+                    id="content3"
+                    role="region"
+                    aria-labelledby="heading3"
+                  >
+                    <p>
+                      Адрес: ул. Красная, 1 Тел.: +7 (495) 123-45-67 <br />
+                      <br />
+                      Режим работы: Пн-Пт 9:00-18:00 Перерыв на обед:
+                      13:00-14:00
+                    </p>
+
+                    <div class="btns">
+                      <a href="tel:" class="btn-success">Заказать звонок</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item" onclick="openAccordion(6)">
+                  <div
+                    class="accordion-title"
+                    id="heading3"
+                    tabindex="0"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="content3"
+                  >
+                    <span>Челябинск</span>
+                    <img
+                      class="acc_icon"
+                      src="./assets/images/icons/acc_icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div
+                    class="accordion-content"
+                    id="content3"
+                    role="region"
+                    aria-labelledby="heading3"
+                  >
+                    <p>
+                      Адрес: ул. Красная, 1 Тел.: +7 (495) 123-45-67 <br />
+                      <br />
+                      Режим работы: Пн-Пт 9:00-18:00 Перерыв на обед:
+                      13:00-14:00
+                    </p>
+
+                    <div class="btns">
+                      <a href="tel:" class="btn-success">Заказать звонок</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item" onclick="openAccordion(7)">
+                  <div
+                    class="accordion-title"
+                    id="heading3"
+                    tabindex="0"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="content3"
+                  >
+                    <span>Омск</span>
+                    <img
+                      class="acc_icon"
+                      src="./assets/images/icons/acc_icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div
+                    class="accordion-content"
+                    id="content3"
+                    role="region"
+                    aria-labelledby="heading3"
+                  >
+                    <p>
+                      Адрес: ул. Красная, 1 Тел.: +7 (495) 123-45-67 <br />
+                      <br />
+                      Режим работы: Пн-Пт 9:00-18:00 Перерыв на обед:
+                      13:00-14:00
+                    </p>
+
+                    <div class="btns">
+                      <a href="tel:" class="btn-success">Заказать звонок</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item" onclick="openAccordion(8)">
+                  <div
+                    class="accordion-title"
+                    id="heading3"
+                    tabindex="0"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="content3"
+                  >
+                    <span>Ростов-на-Дону</span>
+                    <img
+                      class="acc_icon"
+                      src="./assets/images/icons/acc_icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div
+                    class="accordion-content"
+                    id="content3"
+                    role="region"
+                    aria-labelledby="heading3"
+                  >
+                    <p>
+                      Адрес: ул. Красная, 1 Тел.: +7 (495) 123-45-67 <br />
+                      <br />
+                      Режим работы: Пн-Пт 9:00-18:00 Перерыв на обед:
+                      13:00-14:00
+                    </p>
+
+                    <div class="btns">
+                      <a href="tel:" class="btn-success">Заказать звонок</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item" onclick="openAccordion(8)">
+                  <div
+                    class="accordion-title"
+                    id="heading3"
+                    tabindex="0"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="content3"
+                  >
+                    <span>Уфа</span>
+                    <img
+                      class="acc_icon"
+                      src="./assets/images/icons/acc_icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div
+                    class="accordion-content"
+                    id="content3"
+                    role="region"
+                    aria-labelledby="heading3"
+                  >
+                    <p>
+                      Адрес: ул. Красная, 1 Тел.: +7 (495) 123-45-67 <br />
+                      <br />
+                      Режим работы: Пн-Пт 9:00-18:00 Перерыв на обед:
+                      13:00-14:00
+                    </p>
+
+                    <div class="btns">
+                      <a href="tel:" class="btn-success">Заказать звонок</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item" onclick="openAccordion(9)">
+                  <div
+                    class="accordion-title"
+                    id="heading3"
+                    tabindex="0"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="content3"
+                  >
+                    <span>Нижний Новгород</span>
+                    <img
+                      class="acc_icon"
+                      src="./assets/images/icons/acc_icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div
+                    class="accordion-content"
+                    id="content3"
+                    role="region"
+                    aria-labelledby="heading3"
+                  >
+                    <p>
+                      Адрес: ул. Красная, 1 Тел.: +7 (495) 123-45-67 <br />
+                      <br />
+                      Режим работы: Пн-Пт 9:00-18:00 Перерыв на обед:
+                      13:00-14:00
+                    </p>
+
+                    <div class="btns">
+                      <a href="tel:" class="btn-success">Заказать звонок</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item" onclick="openAccordion(10)">
+                  <div
+                    class="accordion-title"
+                    id="heading3"
+                    tabindex="0"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="content3"
+                  >
+                    <span>Владивосток</span>
+                    <img
+                      class="acc_icon"
+                      src="./assets/images/icons/acc_icon.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div
+                    class="accordion-content"
+                    id="content3"
+                    role="region"
+                    aria-labelledby="heading3"
+                  >
+                    <p>
+                      Адрес: ул. Красная, 1 Тел.: +7 (495) 123-45-67 <br />
+                      <br />
+                      Режим работы: Пн-Пт 9:00-18:00 Перерыв на обед:
+                      13:00-14:00
+                    </p>
+
+                    <div class="btns">
+                      <a href="tel:" class="btn-success">Заказать звонок</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Thanks section -->
+      <section class="thanks" id="thanks">
+        <div class="container">
+          <h3>Спасибо! Ваша заявка принята</h3>
+
+          <button class="btn-success" id="thanks__close">Хорошо</button>
+        </div>
+      </section>
+
+      <!-- Company -->
+      <section class="company" id="company">
+        <div class="section__head">
+          <div class="container">
+            <h2 class="title">О компании</h2>
+            <button id="company__close">
+              <img src="./assets/images/icons/prev_icon.svg" alt="icon" />
+            </button>
+          </div>
+        </div>
+
+        <div class="section__body">
+          <div class="container">
+            <div class="company__block">
+              <div class="company__block--item">
+                <div class="company__block--item_icon">
+                  <img
+                    src="./assets/images/icons/company-item1.svg"
+                    alt="icon"
+                  />
+                </div>
+
+                <div class="company__block--item_text">
+                  Наша компания - это динамично развивающаяся финансовая
+                  организация, которая успешно работает на рынке уже более 5
+                  лет. Мы гордимся тем, что наша сеть офисов простирается на
+                  более, чем 12 крупных городов России, что позволяет нам быть
+                  ближе к нашим клиентам и обеспечивать качественное
+                  обслуживание по всей стране.
+                </div>
+              </div>
+
+              <div class="company__block--item">
+                <div class="company__block--item_icon">
+                  <img
+                    src="./assets/images/icons/company-item2.svg"
+                    alt="icon"
+                  />
+                </div>
+
+                <div class="company__block--item_text">
+                  Наша компания специализируется на выдаче займов онлайн,
+                  предлагая клиентам удобные и прозрачные финансовые решения. Мы
+                  понимаем, что вопросы финансов - это важная часть жизни
+                  каждого человека, поэтому мы стремимся предложить нашим
+                  клиентам максимально удобные условия для получения финансовой
+                  поддержки.
+                </div>
+              </div>
+              <div class="company__block--item">
+                <div class="company__block--item_icon">
+                  <img
+                    src="./assets/images/icons/company-item3.svg"
+                    alt="icon"
+                  />
+                </div>
+
+                <div class="company__block--item_text">
+                  Наша круглосуточная техническая поддержка гарантирует, что
+                  клиенты всегда могут получить помощь и консультацию в любое
+                  удобное для них время. Наши сотрудники всегда готовы выслушать
+                  ваши вопросы и предложить наилучшее решение.
+                </div>
+              </div>
+              <div class="company__block--item">
+                <div class="company__block--item_icon">
+                  <img
+                    src="./assets/images/icons/company-item4.svg"
+                    alt="icon"
+                  />
+                </div>
+
+                <div class="company__block--item_text">
+                  Отзывчивый персонал нашей компании стремится создать
+                  доверительные отношения с каждым клиентом. Мы понимаем, что
+                  каждая ситуация уникальна, поэтому мы готовы индивидуально
+                  подходить к потребностям каждого клиента и предлагать
+                  наилучшие решения.
+                </div>
+              </div>
+              <div class="company__block--item">
+                <div class="company__block--item_icon">
+                  <img
+                    src="./assets/images/icons/company-item5.svg"
+                    alt="icon"
+                  />
+                </div>
+
+                <div class="company__block--item_text">
+                  Мы призываем каждого клиента почувствовать себя уверенно и
+                  защищенно в сфере финансов, и готовы сделать все возможное,
+                  чтобы обеспечить комфорт и безопасность при взаимодействии с
+                  нашей компанией.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ section -->
+      <section class="faq" id="faq">
+        <div class="section__head">
+          <div class="container">
+            <h2 class="title">Частые вопросы</h2>
+            <button id="faq__close">
+              <img src="./assets/images/icons/prev_icon.svg" alt="icon" />
+            </button>
+          </div>
+        </div>
+
+        <div class="section__body">
+          <div class="container">
+            <div class="faq__accordion">
+              <div class="faq__accordion--item" id="faq__accordion-item">
+                <div class="faq__accordion--item_title">
+                  <span>Способы получения денег на карту</span>
+                  <img
+                    class="acc_icon"
+                    src="./assets/images/icons/tss-acc-icon.svg"
+                    alt="icon"
+                  />
+                </div>
+                <div class="faq__accordion--item_content">
+                  Получить онлайн-займы можно на карты Мир, Visa, Mastercard (в
+                  т.ч. Maestro), эмитированные банками Российской Федерации. Это
+                  удобный способ получить займ. Информация о возможности
+                  зачислить займ на карту появится в мобильном приложении  после
+                  одобрения займа.
+                </div>
+              </div>
+              <div class="faq__accordion--item" id="faq__accordion-item">
+                <div class="faq__accordion--item_title">
+                  <span>Кто может оформить займ?</span>
+                  <img
+                    class="acc_icon"
+                    src="./assets/images/icons/tss-acc-icon.svg"
+                    alt="icon"
+                  />
+                </div>
+                <div class="faq__accordion--item_content">
+                  Получить онлайн-займы можно на карты Мир, Visa, Mastercard (в
+                  т.ч. Maestro), эмитированные банками Российской Федерации. Это
+                  удобный способ получить займ. Информация о возможности
+                  зачислить займ на карту появится в мобильном приложении  после
+                  одобрения займа.
+                </div>
+              </div>
+              <div class="faq__accordion--item" id="faq__accordion-item">
+                <div class="faq__accordion--item_title">
+                  <span>Какие документы нужны для получения займа?</span>
+                  <img
+                    class="acc_icon"
+                    src="./assets/images/icons/tss-acc-icon.svg"
+                    alt="icon"
+                  />
+                </div>
+                <div class="faq__accordion--item_content">
+                  Получить онлайн-займы можно на карты Мир, Visa, Mastercard (в
+                  т.ч. Maestro), эмитированные банками Российской Федерации. Это
+                  удобный способ получить займ. Информация о возможности
+                  зачислить займ на карту появится в мобильном приложении  после
+                  одобрения займа.
+                </div>
+              </div>
+              <div class="faq__accordion--item" id="faq__accordion-item">
+                <div class="faq__accordion--item_title">
+                  <span>Как долго рассматривается заявка на займ?</span>
+                  <img
+                    class="acc_icon"
+                    src="./assets/images/icons/tss-acc-icon.svg"
+                    alt="icon"
+                  />
+                </div>
+                <div class="faq__accordion--item_content">
+                  Получить онлайн-займы можно на карты Мир, Visa, Mastercard (в
+                  т.ч. Maestro), эмитированные банками Российской Федерации. Это
+                  удобный способ получить займ. Информация о возможности
+                  зачислить займ на карту появится в мобильном приложении  после
+                  одобрения займа.
+                </div>
+              </div>
+              <div class="faq__accordion--item" id="faq__accordion-item">
+                <div class="faq__accordion--item_title">
+                  <span>Можно ли получить займ снова?</span>
+                  <img
+                    class="acc_icon"
+                    src="./assets/images/icons/tss-acc-icon.svg"
+                    alt="icon"
+                  />
+                </div>
+                <div class="faq__accordion--item_content">
+                  Получить онлайн-займы можно на карты Мир, Visa, Mastercard (в
+                  т.ч. Maestro), эмитированные банками Российской Федерации. Это
+                  удобный способ получить займ. Информация о возможности
+                  зачислить займ на карту появится в мобильном приложении  после
+                  одобрения займа.
+                </div>
+              </div>
+              <div class="faq__accordion--item" id="faq__accordion-item">
+                <div class="faq__accordion--item_title">
+                  <span>Как оформить займ без кредитной истории?</span>
+                  <img
+                    class="acc_icon"
+                    src="./assets/images/icons/tss-acc-icon.svg"
+                    alt="icon"
+                  />
+                </div>
+                <div class="faq__accordion--item_content">
+                  Получить онлайн-займы можно на карты Мир, Visa, Mastercard (в
+                  т.ч. Maestro), эмитированные банками Российской Федерации. Это
+                  удобный способ получить займ. Информация о возможности
+                  зачислить займ на карту появится в мобильном приложении  после
+                  одобрения займа.
+                </div>
+              </div>
+              <div class="faq__accordion--item" id="faq__accordion-item">
+                <div class="faq__accordion--item_title">
+                  <span>Возможно ли полное досрочное погашение займа?</span>
+                  <img
+                    class="acc_icon"
+                    src="./assets/images/icons/tss-acc-icon.svg"
+                    alt="icon"
+                  />
+                </div>
+                <div class="faq__accordion--item_content">
+                  Получить онлайн-займы можно на карты Мир, Visa, Mastercard (в
+                  т.ч. Maestro), эмитированные банками Российской Федерации. Это
+                  удобный способ получить займ. Информация о возможности
+                  зачислить займ на карту появится в мобильном приложении  после
+                  одобрения займа.
+                </div>
+              </div>
+              <div class="faq__accordion--item" id="faq__accordion-item">
+                <div class="faq__accordion--item_title">
+                  <span
+                    >Каковы общие условия выдачи займов в вашей компании?</span
+                  >
+                  <img
+                    class="acc_icon"
+                    src="./assets/images/icons/tss-acc-icon.svg"
+                    alt="icon"
+                  />
+                </div>
+                <div class="faq__accordion--item_content">
+                  Получить онлайн-займы можно на карты Мир, Visa, Mastercard (в
+                  т.ч. Maestro), эмитированные банками Российской Федерации. Это
+                  удобный способ получить займ. Информация о возможности
+                  зачислить займ на карту появится в мобильном приложении  после
+                  одобрения займа.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Call meneger => Связьс менеджером -->
+      <section class="callmen" id="callmen">
+        <div class="collmen__block">
+          <div class="callmen__thanks" id="callmen__thanks">
+            <div class="container">
+              <div class="callmen__thanks--content">
+                <h3>
+                  Спасибо! <br />
+                  Ваша заявка принята
+                </h3>
+                <p>Мы свяжемся с вами в ближайшее время</p>
+                <div class="btns">
+                  <button class="btn-success" id="callmen__thanks--close">
+                    Хорошо
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section__head">
+            <div class="container">
+              <h2 class="title">
+                Связь <br />
+                с менеджером
+              </h2>
+              <button id="callmen__close">
+                <img src="./assets/images/icons/prev_icon.svg" alt="icon" />
+              </button>
+            </div>
+          </div>
+
+          <div class="section__body">
+            <div class="container">
+              <div class="section__body--title">Обратная связь</div>
+              <form class="callmen__form" id="callmen__form" required>
+                <input type="text" name="name" placeholder="ФИО" required />
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="Номер телефона"
+                  required
+                />
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                  placeholder="Введите сообщение"
+                ></textarea>
+
+                <div class="btns">
+                  <button class="btn-success">Отправить</button>
+                </div>
+              </form>
+
+              <div class="section__bottom">
+                <div class="section__bottom--item">
+                  <label for="ariza-checkbox" class="text-light"
+                    >Даю своё согласие <br />
+                    на обработку</label
+                  >
+                  <a href="#" class="link">персональных данных</a>
+                </div>
+
+                <div class="checkbox_block">
+                  <input
+                    type="checkbox"
+                    id="callmen-checkbox_day"
+                    class="ariza-checkbox"
+                  />
+                  <label for="callmen-checkbox_day" class="custom-checkbox">
+                    <span></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Agrement -->
+
+      <section class="agreement" id="agreement">
+        <div class="section__head">
+          <div class="container">
+            <h2 class="title">Пользовательское соглашение</h2>
+            <button id="faq__close">
+              <img src="./assets/images/icons/prev_icon.svg" alt="icon" />
+            </button>
+          </div>
+        </div>
+
+        <div class="section__body">
+          <div class="container">
+            <div class="agreement__content">
+              <p>
+                <b
+                  >Согласие пользователя мобильного приложения на обработку
+                  персональных данных.
+                </b>
+                <br />
+                <br />
+                Регистрируясь (заполняя форму) в Мобильном приложении Общества с
+                ограниченной ответственностью “МКК «МаниКэш» (далее Общество) и
+                Разработчика Мобильного приложения действующего на основании
+                Соглашения №2 с Обществом от 13 марта 2024г., Пользователь,
+                выступая в качестве субъекта персональных данных предоставляет
+                согласие на обработку персональных данных. Пользователь нажатием
+                на кнопку "Я даю согласие на обработку своих персональных
+                данных", безусловно принимает (предоставляет акцепт) всех
+                положений настоящего Согласия. Перечень персональных данных
+                Пользователя, собираемых в приложении: Фамилия, Имя, Отчество,
+                Адрес электронной почты, Номер мобильного телефона. Настоящее
+                Согласие действует в отношении всех персональных данных
+                Пользователя, указанных им при заполнении формы в Мобильном
+                приложении; Цели обработки персональных данных: Подбор Мобильным
+                приложением предложений займов от сторонних микрофинансовых и
+                микрокредитных компаний; Передача полученных персональных данных
+                для оценки возможности выдачи займа в Обществе. Согласие
+                Пользователя включает в себя, в том числе, согласие с тем, что
+                получение данных, относящихся к Пользователю, их уточнение,
+                блокирование и уничтожение допускается в случаях, установленных
+                действующим законодательством на основании письменного заявления
+                Пользователя, которое должно соответствовать требованиям,
+                установленным действующим законодательством РФ.  Согласие,
+                предоставленное Пользователем, действует с момента установки
+                соответствующего переключателя в Мобильном приложении Общества и
+                действительно в течение 5 (пяти) лет. Пользователь имеет право
+                отозвать настоящее согласие. Отзыв осуществляется в форме подачи
+                заявки через форму обратной связи сайта. После получения отзыва
+                персональные данные подлежат уничтожению либо обезличиванию, в
+                порядке, предусмотренном действующим законодательством РФ.
+                Мобильное приложение разрабатывается и поддерживается
+                Разработчиком. Персональные данные полученные в заявке
+                Мобильного приложения пересылаются в Ообщество и без сохранения
+                копии на серверах Разработчика. В случае если Пользователь
+                передавал свои персональные данные сторонней микрофинансовой или
+                микрокредитной компании подобранной в Мобильном приложении, то
+                по вопросу отзыва согласия необходимо обращаться в
+                соответствующую микрофинансовую или микрокредитную компанию.
+                Мобильное приложение не сохраняет персональные данные
+                пользователя в процессе работы пользователя со сторонними
+                микрофинансовыми и микрокредитными компаниями, не является
+                стороной сделки и не является ответственной за условия сделок
+                заключенных Пользователем и сторонней микрокредитной,
+                микрофинансовой компанией. Все микрокредитные и микрофинансовые
+                компании представленные в приложении имеют действующую лицензию
+                ЦБ РФ. 1. Я, являющийся Пользователем, подтверждаю, что обладаю
+                всей полнотой правоспособности для выражения данного согласия,
+                действую осознанно, по своей воле и в собственных интересах.  2.
+                Информация, предоставляемая мной Обществу и партнерам в связи с
+                необходимостью подбора займа, в том числе указанная в Форме
+                регистрации и является полной, точной и достоверной во всех
+                отношениях, признаю и подтверждаю, что самостоятельно и
+                полностью несу ответственность за предоставленные мной
+                персональные данные, включая их полноту, достоверность,
+                недвусмысленность и относимость непосредственно ко мне.  3. Я
+                согласен на проверку Обществом или иными лицами по его поручению
+                указанной информации.  4. В соответствии с Федеральным законом
+                от 27.07.2006 No 152- ФЗ «О персональных данных» Я, Пользователь
+                даю Согласие Обществу и Разработчику, действующему на основании
+                Соглашения с Обществом на обработку всех моих персональных
+                данных, указанных в форме регистрации Мобильного приложения,
+                посредством использования средств автоматизации или без
+                использования таких средств, включая сбор, запись,
+                систематизацию, накопление, хранение, уточнение (обновление,
+                изменение), извлечение, использование, обезличивание,
+                блокирование, уничтожение, передачу (распространение,
+                предоставление, доступ), а также третьим лицам при выполнении
+                требований законодательства РФ. <br />
+                <br />
+              </p>
+              <div class="btns">
+                <button class="btn-success">Понятно</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

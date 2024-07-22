@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  max-width: 393px;
+  height: auto;
+  margin: 20px auto;
+
+  position: relative;
+
+  overflow-x: hidden;
+}
+
+.section__head {
+  padding: 62px 43px 0 34px;
+  background: $base-color;
+  height: 124px;
+}
+
+.container {
+  max-width: 326px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.text-light {
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.text-success {
+  color: #66a400;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  text-decoration-line: underline;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-success {
+  width: 172px;
+  height: 57px;
+  border-radius: 10px;
+  background: #66a400;
+
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.link {
+  color: #66a400;
+  text-align: center;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  text-decoration-line: underline;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.section__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.section__head {
+  button {
+    background: none;
+    border-radius: 50%;
+  }
+}
+
+.section__bottom {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 96px;
+  padding: 0 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--item {
+    width: 58%;
+  }
+  .ariza-checkbox {
+    display: none; /* Hide the default checkbox */
+  }
+
+  .custom-checkbox {
+    display: inline-block;
+    width: 53px;
+    height: 26px;
+    background: #7b7b7b;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    margin-top: -7px;
+  }
+
+  .custom-checkbox span {
+    // display: none; /* Hide the checkmark initially */
+    position: absolute;
+    top: 50%;
+    left: calc(0% + 14px);
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #d7db00;
+    border-radius: 50%;
+    transition: 0.25s all ease;
+  }
+
+  .ariza-checkbox:checked + .custom-checkbox {
+    background: #fff;
+  }
+
+  .ariza-checkbox:checked + .custom-checkbox span {
+    display: block; /* Show the checkmark when checked */
+
+    left: calc(100% - 14px);
+    background-color: #66a400;
+  }
+}
+
+.section__body {
+  background: $section-bg;
+}
+
+.section__body--title {
+  width: 100%;
+  margin-top: 16px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+
+.count {
+  color: #d7db00;
+
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: -5px;
+}
+
+.ariza__range {
+  border-radius: 10px;
+  width: 100%;
+  margin: 28px 0;
+
+  /*********** Baseline, reset styles ***********/
+  &[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #7b7b7b;
+    cursor: pointer;
+    //   width: 25rem;
+  }
+
+  /******** Chrome, Safari, Opera and Edge Chromium styles ********/
+  /* slider track */
+  &[type="range"]::-webkit-slider-runnable-track {
+    // background-color: #8f8f8f;
+    border-radius: 10px;
+    height: 14px;
+  }
+
+  /* slider thumb */
+  &[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -8px; /* Centers thumb on the track */
+    background-color: #11ff00;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+  }
+
+  /*********** Firefox styles ***********/
+  /* slider track */
+  &[type="range"]::-moz-range-track {
+    // background-color: #8f8f8f;
+    border-radius: 10px;
+    height: 14px;
+  }
+
+  /* slider thumb */
+  &[type="range"]::-moz-range-thumb {
+    // background-color: #11ff00;
+    // border: none; /*Removes extra border that FF applies*/
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+  }
+}
