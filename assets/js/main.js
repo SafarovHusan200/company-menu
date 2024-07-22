@@ -167,8 +167,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  agreement.querySelector("#agreement__close").addEventListener("click", () => {
-    agreement.classList.remove("show");
+  agreement.querySelectorAll("#agreement__close").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      agreement.classList.remove("show");
+    });
   });
 
   const openAccordion = (index) => {
