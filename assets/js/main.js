@@ -67,8 +67,24 @@ document
   .addEventListener("click", function () {
     if (this.checked) {
       arizaNext.disabled = false;
+
+      // day 2
+      document.getElementById("ariza-checkbox_day").checked = true;
+      arizaNextInDay.disabled = false;
+
+      // ariza form 3
+      document.getElementById("contact-checkbox").checked = true;
+      document.getElementById("apply-now").disabled = false;
     } else {
       arizaNext.disabled = true;
+
+      // day 2
+      document.getElementById("ariza-checkbox_day").checked = false;
+      arizaNextInDay.disabled = true;
+
+      // ariza form 3
+      document.getElementById("contact-checkbox").checked = false;
+      document.getElementById("apply-now").disabled = true;
     }
   });
 document
@@ -76,8 +92,24 @@ document
   .addEventListener("click", function () {
     if (this.checked) {
       arizaNextInDay.disabled = false;
+
+      // rubl 1
+      document.getElementById("ariza-checkbox").checked = true;
+      arizaNext.disabled = false;
+
+      // ariza form 3
+      document.getElementById("contact-checkbox").checked = true;
+      document.getElementById("apply-now").disabled = false;
     } else {
       arizaNextInDay.disabled = true;
+
+      // rubl 1
+      document.getElementById("ariza-checkbox").checked = false;
+      arizaNext.disabled = true;
+
+      // ariza form 3
+      document.getElementById("contact-checkbox").checked = false;
+      document.getElementById("apply-now").disabled = true;
     }
   });
 
@@ -86,8 +118,24 @@ document
   .addEventListener("click", function () {
     if (this.checked) {
       document.getElementById("apply-now").disabled = false;
+
+      // rubl 1
+      document.getElementById("ariza-checkbox").checked = true;
+      arizaNext.disabled = false;
+
+      // day 2
+      document.getElementById("ariza-checkbox_day").checked = true;
+      arizaNextInDay.disabled = false;
     } else {
       document.getElementById("apply-now").disabled = true;
+
+      // rubl 1
+      document.getElementById("ariza-checkbox").checked = false;
+      arizaNext.disabled = true;
+
+      // day 2
+      document.getElementById("ariza-checkbox_day").checked = false;
+      arizaNextInDay.disabled = true;
     }
   });
 document
