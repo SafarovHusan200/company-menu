@@ -229,19 +229,57 @@ progressElements.forEach(function (element) {
   });
 });
 
+// function calculateLoan() {
+//   let sum = parseInt(document.querySelector("input[name=sum]").value);
+//   let percent = parseInt(document.querySelector("input[name=bet]").value);
+//   let days = parseInt(document.querySelector("input[name=limitation]").value);
+
+//   percent = percent / 100;
+
+//   let overPayment = (sum * percent * days) / 365;
+//   let totalPayment = sum + overPayment;
+//   let perMonth = totalPayment / (days / 30);
+//   console.log("oy", days / 30);
+//   console.log("total", totalPayment);
+
+//   document.querySelector(".everyMonthsPrice span").textContent =
+//     perMonth.toLocaleString("en-US", {
+//       minimumFractionDigits: 0,
+//       maximumFractionDigits: 0,
+//     });
+
+//   document.querySelector(".overPayment span").textContent =
+//     overPayment.toLocaleString("en-US", {
+//       minimumFractionDigits: 0,
+//       maximumFractionDigits: 0,
+//     });
+
+//   document.querySelector(".totalPayments span").textContent =
+//     totalPayment.toLocaleString("en-US", {
+//       minimumFractionDigits: 0,
+//       maximumFractionDigits: 0,
+//     });
+// }
+
 function calculateLoan() {
-  let sum = parseInt(document.querySelector("input[name=sum]").value);
-  let percent = parseInt(document.querySelector("input[name=bet]").value);
+  let sum = parseFloat(document.querySelector("input[name=sum]").value);
+  let percent = parseFloat(document.querySelector("input[name=bet]").value);
   let days = parseInt(document.querySelector("input[name=limitation]").value);
 
-  percent = percent / 100;
+  // Convert annual percentage rate to daily rate
+  let dailyRate = percent / 100 / 365;
 
-  let overPayment = (sum * percent * days) / 365;
+  // Calculate overpayment and total payment
+  let overPayment = sum * dailyRate * days;
   let totalPayment = sum + overPayment;
-  let perDay = totalPayment / (days / 30);
 
+  // Calculate monthly payment considering varying month lengths
+  let months = days / 30.4375; // average days in a month
+  let perMonth = totalPayment / months;
+
+  // Update the document with calculated values
   document.querySelector(".everyMonthsPrice span").textContent =
-    perDay.toLocaleString("en-US", {
+    perMonth.toLocaleString("en-US", {
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     });
