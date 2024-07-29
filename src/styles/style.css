@@ -330,6 +330,15 @@ button:disabled {
   top: 170px;
   left: 228px;
 }
+@media (min-width: 393px) {
+  .menu__map .location,
+  .menu__map .location2,
+  .menu__map .location3,
+  .menu__map .location4,
+  .menu__map .location5 {
+    display: none;
+  }
+}
 
 .ariza {
   max-width: 100%;

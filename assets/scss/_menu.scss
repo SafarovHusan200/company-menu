@@ -105,5 +105,15 @@
       top: 170px;
       left: 228px;
     }
+
+    @media (min-width: 393px) {
+      .location,
+      .location2,
+      .location3,
+      .location4,
+      .location5 {
+        display: none;
+      }
+    }
   }
 }
