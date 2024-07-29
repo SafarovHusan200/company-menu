@@ -11,7 +11,7 @@ html {
 }
 
 .wrapper {
-  max-width: 393px;
+  max-width: 100%;
   height: auto;
   margin: 0px auto;
   position: relative;
@@ -332,7 +332,7 @@ button:disabled {
 }
 
 .ariza {
-  max-width: 393px;
+  max-width: 100%;
   width: 100%;
   position: absolute;
   top: 0;
@@ -633,6 +633,9 @@ button:disabled {
 .office .section__body .container {
   flex-direction: column;
 }
+.office .section__body .container .office__accordion {
+  width: 100%;
+}
 .office .section__body .container .accordion-items {
   display: flex;
   flex-direction: column;
@@ -785,7 +788,7 @@ button:disabled {
 }
 
 .thanks {
-  width: 393px;
+  width: 100%;
   height: 852px;
   background: linear-gradient(180deg, #3c3c3c 0%, #191919 100%);
   position: absolute;

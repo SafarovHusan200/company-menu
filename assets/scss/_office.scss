@@ -22,6 +22,10 @@
     .container {
       flex-direction: column;
 
+      .office__accordion {
+        width: 100%;
+      }
+
       .accordion-items {
         display: flex;
         flex-direction: column;
