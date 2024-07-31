@@ -12,25 +12,25 @@ html {
 
 .wrapper {
   max-width: 100%;
-  height: auto;
+  height: 100dvh;
   margin: 0px auto;
   position: relative;
   overflow-x: hidden;
 }
 
 .section__head {
-  padding: 62px 0 0 0;
+  padding: 47px 0 0 0;
   background: #66a400;
   height: 124px;
 }
 
 .container {
-  max-width: 100%;
-  padding: 0 12px;
+  max-width: 100% !important;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 12px;
 }
 
 .row {
@@ -200,18 +200,18 @@ button:disabled {
   /* slider track */
   /* slider thumb */
 }
-.ariza__range[type="range"] {
+.ariza__range[type=range] {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+       appearance: none;
   background: #7b7b7b;
   cursor: pointer;
 }
-.ariza__range[type="range"]::-webkit-slider-runnable-track {
+.ariza__range[type=range]::-webkit-slider-runnable-track {
   border-radius: 10px;
   height: 14px;
 }
-.ariza__range[type="range"]::-webkit-slider-thumb {
+.ariza__range[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
   margin-top: -8px; /* Centers thumb on the track */
@@ -220,11 +220,11 @@ button:disabled {
   height: 30px;
   width: 30px;
 }
-.ariza__range[type="range"]::-moz-range-track {
+.ariza__range[type=range]::-moz-range-track {
   border-radius: 10px;
   height: 14px;
 }
-.ariza__range[type="range"]::-moz-range-thumb {
+.ariza__range[type=range]::-moz-range-thumb {
   border-radius: 50%;
   height: 30px;
   width: 30px;
@@ -244,11 +244,10 @@ button:disabled {
 
 .menu {
   width: 100%;
-  height: 728px;
+  height: calc(100vh - 124px);
   overflow: hidden;
   padding: 25px 0 0 0;
   background: linear-gradient(180deg, #3c3c3c 0%, #191919 100%);
-  margin-bottom: 20px;
 }
 .menu .container {
   flex-direction: column;
@@ -297,7 +296,7 @@ button:disabled {
 }
 .menu__map {
   width: 100%;
-  height: 269px;
+  height: calc(100dvh - 625px);
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -331,16 +330,16 @@ button:disabled {
   top: 170px;
   left: 228px;
 }
-
-@media (min-width: 360px) {
-  .location,
-  .location2,
-  .location3,
-  .location4,
-  .location5 {
+@media (min-width: 393px) {
+  .menu__map .location,
+  .menu__map .location2,
+  .menu__map .location3,
+  .menu__map .location4,
+  .menu__map .location5 {
     display: none;
   }
 }
+
 .ariza {
   max-width: 100%;
   width: 100%;
@@ -425,13 +424,9 @@ button:disabled {
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(60, 60, 60, 0.7) 0%,
-    rgba(25, 25, 25, 0.7) 100%
-  );
+  background: linear-gradient(180deg, rgba(60, 60, 60, 0.7) 0%, rgba(25, 25, 25, 0.7) 100%);
   -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 .ariza__result.show {
   opacity: 1;
@@ -606,11 +601,7 @@ button:disabled {
   border-radius: 10px;
   background: #fff;
 }
-.contact
-  .section__body
-  .container
-  .form__contact--item
-  input::-moz-placeholder {
+.contact .section__body .container .form__contact--item input::-moz-placeholder {
   color: #d6d6d6;
   font-size: 16px;
   font-style: normal;
@@ -651,7 +642,6 @@ button:disabled {
 .office .section__body .container {
   flex-direction: column;
 }
-
 .office .section__body .container .office__accordion {
   width: 100%;
 }
@@ -666,68 +656,28 @@ button:disabled {
   margin: 0;
   min-height: 57px;
 }
-.office
-  .section__body
-  .container
-  .accordion-items
-  .accordion-item:nth-child(2)
-  .accordion-title {
+.office .section__body .container .accordion-items .accordion-item:nth-child(2) .accordion-title {
   background: #a6c400;
 }
-.office
-  .section__body
-  .container
-  .accordion-items
-  .accordion-item:nth-child(3)
-  .accordion-title {
+.office .section__body .container .accordion-items .accordion-item:nth-child(3) .accordion-title {
   background: #d7db00;
 }
-.office
-  .section__body
-  .container
-  .accordion-items
-  .accordion-item:nth-child(5)
-  .accordion-title {
+.office .section__body .container .accordion-items .accordion-item:nth-child(5) .accordion-title {
   background-color: #a6c400;
 }
-.office
-  .section__body
-  .container
-  .accordion-items
-  .accordion-item:nth-child(6)
-  .accordion-title {
+.office .section__body .container .accordion-items .accordion-item:nth-child(6) .accordion-title {
   background-color: #d7db00;
 }
-.office
-  .section__body
-  .container
-  .accordion-items
-  .accordion-item:nth-child(8)
-  .accordion-title {
+.office .section__body .container .accordion-items .accordion-item:nth-child(8) .accordion-title {
   background-color: #a6c400;
 }
-.office
-  .section__body
-  .container
-  .accordion-items
-  .accordion-item:nth-child(9)
-  .accordion-title {
+.office .section__body .container .accordion-items .accordion-item:nth-child(9) .accordion-title {
   background-color: #d7db00;
 }
-.office
-  .section__body
-  .container
-  .accordion-items
-  .accordion-item:nth-child(11)
-  .accordion-title {
+.office .section__body .container .accordion-items .accordion-item:nth-child(11) .accordion-title {
   background-color: #a6c400;
 }
-.office
-  .section__body
-  .container
-  .accordion-items
-  .accordion-item:nth-child(12)
-  .accordion-title {
+.office .section__body .container .accordion-items .accordion-item:nth-child(12) .accordion-title {
   background-color: #d7db00;
 }
 .office .section__body .container .accordion-title {
@@ -899,13 +849,9 @@ button:disabled {
 .callmen .collmen__block .callmen__thanks {
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(60, 60, 60, 0.7) 0%,
-    rgba(25, 25, 25, 0.7) 100%
-  );
+  background: linear-gradient(180deg, rgba(60, 60, 60, 0.7) 0%, rgba(25, 25, 25, 0.7) 100%);
   -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   position: absolute;
   left: 0;
   top: -100%;
@@ -961,8 +907,7 @@ button:disabled {
   background: #fff;
   margin-bottom: 11px;
 }
-.callmen .section__body .container .callmen__form input::-moz-placeholder,
-.callmen .section__body .container .callmen__form textarea::-moz-placeholder {
+.callmen .section__body .container .callmen__form input::-moz-placeholder, .callmen .section__body .container .callmen__form textarea::-moz-placeholder {
   color: #d6d6d6;
   font-size: 16px;
   font-weight: 500;
@@ -1018,4 +963,4 @@ button:disabled {
 .agreement .section__body .container .agreement__content .btns {
   margin-top: 10px;
   margin: 10px 0 50px 0;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
