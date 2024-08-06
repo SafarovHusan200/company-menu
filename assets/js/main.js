@@ -156,6 +156,22 @@ arizaNext.addEventListener("click", () => {
   arizaResult.classList.add("show");
 });
 
+document.querySelectorAll("#show__ariza__accept").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    arizaResult.classList.add("show");
+  });
+});
+document
+  .querySelector("#show__calculator__accept")
+  .addEventListener("click", () => {
+    document.getElementById("calculator__result").classList.add("show");
+  });
+
+document
+  .getElementById("calculator-accept-and")
+  .addEventListener("click", (e) => {
+    document.getElementById("calculator__result").classList.remove("show");
+  });
 arizaAccept.addEventListener("click", () => {
   arizaResult.classList.remove("show");
 

@@ -174,7 +174,7 @@
                 <button class="btn-success" id="ariza-next" disabled>
                   Далее
                 </button>
-                <a href="#" class="link" id="personal_data"
+                <a href="#" class="link" id="show__ariza__accept"
                   >Условия выдачи займов</a
                 >
               </div>
@@ -239,7 +239,7 @@
                 <button class="btn-success" id="ariza-next_in-day" disabled>
                   Далее
                 </button>
-                <a href="#" class="link" id="personal_data"
+                <a href="#" class="link" id="show__ariza__accept"
                   >Условия выдачи займов</a
                 >
               </div>
@@ -357,122 +357,154 @@
 
       <!-- Calculator section -->
       <section class="calculator" id="calculator">
-        <div class="section__head">
-          <div class="container">
-            <h2 class="title">Калькулятор</h2>
-            <button id="calculator__close">
-              <img src="./assets/images/icons/prev_icon.svg" alt="icon" />
-            </button>
-          </div>
-        </div>
+        <div class="calculator__block">
+          <div class="calculator__result" id="calculator__result">
+            <div class="calculator__result--content">
+              <div class="calculator__result--content_text">
+                <h4>Условия предоставления услуг:</h4>
+                <br />
 
-        <div class="section__body">
-          <div class="container">
-            <div class="calculator__block">
-              <!-- Calc summa -->
-              <div class="calculator__block--summa">
-                <div class="row">
-                  <label for="calc__range-summa " class="text-light"
-                    >Сумма</label
-                  >
-                  <div class="count"><span>1 000</span> ₽</div>
-                </div>
-
-                <input
-                  type="range"
-                  class="ariza__range"
-                  id="calc__range-summa"
-                  name="sum"
-                  min="1000"
-                  max="60000"
-                  value="1000"
-                  step="1"
-                />
-
-                <div class="row">
-                  <span class="text-light">1 000 ₽</span>
-                  <span class="text-light">60 000 ₽</span>
-                </div>
+                <p>
+                  Минимальный срок погашения кредита составляет 61 день; -
+                  Максимальный срок погашения кредита составляет 365 дней; -
+                  Максимальная годовая процентная ставка, включающая ссудный
+                  процент, а также все остальные комиссии и расходы за год
+                  (Annual Percentage Rate APR) составляет 33%,  минимальная
+                  0,5%. Годовой процент за пользование Кредитом - min 0,5%, max
+                  33,29%. - Минимальная ставка за пользование кредитом в день
+                  составляет 0.5%; - Максимальная ставка за пользование кредитом
+                  в день составляет 0,84%; - Другие комиссии отсутствуют. -
+                  Продление кредита возможно при своевременном обращении в офис
+                  компании персонально или по телефону.
+                </p>
               </div>
-
-              <!-- Calc stavka -->
-              <div class="calculator__block--stavka">
-                <div class="row">
-                  <label for="calc__range-stavka " class="text-light"
-                    >Ставка</label
-                  >
-                  <div class="count"><span>1</span> %</div>
-                </div>
-
-                <input
-                  type="range"
-                  class="ariza__range"
-                  id="calc__range-stavka"
-                  name="bet"
-                  min="0.5"
-                  max="33"
-                  value="1"
-                  step="0.5"
-                />
-
-                <div class="row">
-                  <span class="text-light">0,5%</span>
-                  <span class="text-light">33%</span>
-                </div>
-              </div>
-
-              <!-- Calc srok(term) -->
-              <div class="calculator__block--term">
-                <div class="row">
-                  <label for="calc__range-term " class="text-light">Срок</label>
-                  <div class="count"><span>61</span> дней</div>
-                </div>
-
-                <input
-                  type="range"
-                  class="ariza__range"
-                  id="calc__range-term"
-                  name="limitation"
-                  min="61"
-                  max="365"
-                  value="61"
-                  step="1"
-                />
-
-                <div class="row">
-                  <span class="text-light">61 день</span>
-                  <span class="text-light">365 дней</span>
-                </div>
-              </div>
-
-              <!-- Calculator result -->
-              <div class="calculator__block--result">
-                <div class="row">
-                  <div class="calc-res-text w-50">Ежемесячный платёж</div>
-                  <div class="calc-res-number everyMonthsPrice">
-                    <span>12 500</span> ₽
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="calc-res-text">Переплата</div>
-                  <div class="calc-res-number overPayment">
-                    <span>4 500</span> ₽
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="calc-res-text">Общая выплата</div>
-                  <div class="calc-res-number totalPayments">
-                    <span>49 500</span> ₽
-                  </div>
-                </div>
+              <div class="calculator__result--btn">
+                <button class="btn-success" id="calculator-accept-and">
+                  Понятно
+                </button>
               </div>
             </div>
+          </div>
 
-            <div class="btn_and_link">
-              <button class="btn-success" id="calculator-next">Далее</button>
-              <a href="#" class="link" id="personal_data"
-                >Условия выдачи займов</a
-              >
+          <div class="section__head">
+            <div class="container">
+              <h2 class="title">Калькулятор</h2>
+              <button id="calculator__close">
+                <img src="./assets/images/icons/prev_icon.svg" alt="icon" />
+              </button>
+            </div>
+          </div>
+
+          <div class="section__body">
+            <div class="container">
+              <div class="calculator__block">
+                <!-- Calc summa -->
+                <div class="calculator__block--summa">
+                  <div class="row">
+                    <label for="calc__range-summa " class="text-light"
+                      >Сумма</label
+                    >
+                    <div class="count"><span>1 000</span> ₽</div>
+                  </div>
+
+                  <input
+                    type="range"
+                    class="ariza__range"
+                    id="calc__range-summa"
+                    name="sum"
+                    min="1000"
+                    max="60000"
+                    value="1000"
+                    step="1"
+                  />
+
+                  <div class="row">
+                    <span class="text-light">1 000 ₽</span>
+                    <span class="text-light">60 000 ₽</span>
+                  </div>
+                </div>
+
+                <!-- Calc stavka -->
+                <div class="calculator__block--stavka">
+                  <div class="row">
+                    <label for="calc__range-stavka " class="text-light"
+                      >Ставка</label
+                    >
+                    <div class="count"><span>1</span> %</div>
+                  </div>
+
+                  <input
+                    type="range"
+                    class="ariza__range"
+                    id="calc__range-stavka"
+                    name="bet"
+                    min="0.5"
+                    max="33"
+                    value="1"
+                    step="0.5"
+                  />
+
+                  <div class="row">
+                    <span class="text-light">0,5%</span>
+                    <span class="text-light">33%</span>
+                  </div>
+                </div>
+
+                <!-- Calc srok(term) -->
+                <div class="calculator__block--term">
+                  <div class="row">
+                    <label for="calc__range-term " class="text-light"
+                      >Срок</label
+                    >
+                    <div class="count"><span>61</span> дней</div>
+                  </div>
+
+                  <input
+                    type="range"
+                    class="ariza__range"
+                    id="calc__range-term"
+                    name="limitation"
+                    min="61"
+                    max="365"
+                    value="61"
+                    step="1"
+                  />
+
+                  <div class="row">
+                    <span class="text-light">61 день</span>
+                    <span class="text-light">365 дней</span>
+                  </div>
+                </div>
+
+                <!-- Calculator result -->
+                <div class="calculator__block--result">
+                  <div class="row">
+                    <div class="calc-res-text w-50">Ежемесячный платёж</div>
+                    <div class="calc-res-number everyMonthsPrice">
+                      <span>12 500</span> ₽
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="calc-res-text">Переплата</div>
+                    <div class="calc-res-number overPayment">
+                      <span>4 500</span> ₽
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="calc-res-text">Общая выплата</div>
+                    <div class="calc-res-number totalPayments">
+                      <span>49 500</span> ₽
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="btn_and_link">
+                <button class="btn-success" id="calculator-next">Далее</button>
+                <a href="#" class="link" id="show__calculator__accept"
+                  >Условия выдачи займов</a
+                >
+              </div>
             </div>
           </div>
         </div>
